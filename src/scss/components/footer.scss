@@ -1,0 +1,26 @@
+.footer {
+    display: flex;
+    .footer-area {
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-logo {
+        background-color: #084154;
+        width: 30%;
+        justify-content: flex-end;
+    }
+
+    .footer-copyright {
+        background-color: #3ec6e0;
+        width: 70%;
+        em {
+            color: white;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            font-style: normal;
+        }
+    }
+}

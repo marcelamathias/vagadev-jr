@@ -1,15 +1,225 @@
 <!DOCTYPE html>
 <html lang="pt-Br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>N1 Rush</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet" />
 </head>
-<body>
 
-    
+<body>
+    <header class="header ">
+        <div class="container">
+            <div class="header-section">
+                <div class="menu-nav">
+                    <button class="menu-button js-menu-open">
+                        <img src="svgs/icon_hamburguer.svg" alt="menu">
+                    </button>
+                    <nav class="menu-categories">
+                        <ul>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link menu-departament">Luta</a>
+                                <ul class="menu-sublist">
+                                    <li class="menu-subitem">
+                                        <a href="#" class="menu-link">Mortal Kombat</a>
+                                    </li>
+                                    <li class="menu-subitem">
+                                        <a href="#" class="menu-link">Smash Bross</a>
+                                    </li>
+                                    <li class="menu-subitem">
+                                        <a href="#" class="menu-link">Killer Instect</a>
+                                    </li>
+                                    <li class="menu-subitem">
+                                        <a href="#" class="menu-link">DBZ Kakarot</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link menu-departament">Ação / Aventura</a>
+                                <ul class="menu-sublist">
+                                    <li class="menu-subitem">
+                                        <a href="#" class="menu-link">GTA V</a>
+                                    </li>
+                                    <li class="menu-subitem">
+                                        <a href="#" class="menu-link">Tomb Raider</a>
+                                    </li>
+                                    <li class="menu-subitem">
+                                        <a href="#" class="menu-link">Hallo</a>
+                                    </li>
+                                    <li class="menu-subitem">
+                                        <a href="#" class="menu-link">Call of Duty</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link menu-departament">Corrida</a>
+                                <ul class="menu-sublist">
+                                    <li class="menu-subitem">
+                                        <a href="#" class="menu-link">Need For Speed</a>
+                                    </li>
+                                    <li class="menu-subitem">
+                                        <a href="#" class="menu-link">Forza Horizon</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <a href="/" title="N1-Rush">
+                    <img src="img/logo-n1-rush.png" alt="n1-rush">
+
+                </a>
+
+            </div>
+            <nav class="menu-user">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i>
+                                <img src="svgs/paper-plane.svg" alt="">
+                            </i>
+                            <span>contato</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i>
+                                <img src="svgs/search-solid.svg" alt="">
+                            </i>
+                            <span>buscar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i>
+                                <img src="svgs/shopping-bag-solid.svg" alt="">
+                            </i>
+                            <span class="minicart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+    <main>
+        <section class="banner-tv">
+            <ul class="js-bannertv">
+                <li>
+                    <img src="img/principal_banner_desktop.jpg" alt="Mortal Kombat">
+                    <div class="banner-text">
+                        <h2 class="banner-title">Mortal Kombat</h2>
+                        <span class="banner-price">R$ 299<em>,99</em></span>
+                        <p class="banner-subtitle">
+                            Mortal Kombat X combina uma apresentação cinemática única com uma jogabilidade totalmente nova. Os jogadores podem escolher pela primeira vez diversas variantes de cada personagem, afetando tanto a estratégia como o estilo de luta.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/principal_banner_desktop_02.jpg" alt="Red Dead Redemption">
+                    <div class="banner-text hide--lg">
+                        <h2 class="banner-title">Red dead Redemption II</h2>
+                        <span class="banner-price">R$ 299<em>,99</em></span>
+                        <p class="banner-subtitle">
+                            Mortal Kombat X combina uma apresentação cinemática única com uma jogabilidade totalmente nova. Os jogadores podem escolher pela primeira vez diversas variantes de cada personagem, afetando tanto a estratégia como o estilo de luta.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <div class="banner-navigation">
+                <h2></h2>
+                <div class="slick-navigation">
+                    <ul class="slick-buttons">
+                        <li>
+                            <button type="button" class="slick-prev">
+                                <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.905 0L0.524 8.381L0 8.929L0.524 9.477L8.905 17.858L10.005 16.758L2.166 8.929L9.999 1.096L8.905 0Z" fill="white"/>
+                                </svg>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="slick-next">
+                                <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.09609 0L-0.00390625 1.1L7.82909 8.933L-0.00390625 16.766L1.09609 17.866L9.47709 9.485L10.0011 8.937L9.47709 8.389L1.09609 0Z" fill="white"/>
+                                </svg>        
+                            </button>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="custom-paging">
+
+                </div>
+            </div>
+        </section>
+        <section class="content container">
+            <div class="box-content">
+
+                <a href="#">
+                    <img src="img/zelda_banner.jpg" alt="">
+                    <span class="content-subtitle">
+                        <h2>The Legend of Zelda - Breath of the wild </h2>
+                    </span>
+                </a>
+                <a href="#">
+                    <img src="img/sekiro_banner.jpg" alt="">
+                    <span class="content-subtitle">
+                        <h2>SEKIRO - Shadows die twice</h2>
+                    </span>
+                </a>
+            </div>
+        </section>
+        <section class="shelf container">
+            <h2 class="shelf-title">Produtos em destaque</h2>
+            <ul class="product-list">
+                <li class="product-item">
+                    <img src="img/product-outriders.png" alt="">
+                    <div class="product-info">
+                        <h2 class="product-title">Outriders</h2>
+                        <span class="product-price">R$200,00</span>
+                        <button class="buy-button js-buy">Comprar</button>
+                    </div>
+                </li>
+                <li class="product-item">
+                    <img src="img/product-cyberpunk2077.png" alt="">
+                    <div class="product-info">
+                        <h2 class="product-title">CyberPunk 2077</h2>
+                        <span class="product-price">R$200,00</span>
+                        <button class="buy-button js-buy">Comprar</button>
+                    </div>
+                </li>
+                <li class="product-item">
+                    <img src="img/product-donkey-kong-country-tropical-freeze.png" alt="">
+                    <div class="product-info">
+                        <h2 class="product-title">Donkey Kong Country Tropical Freeze</h2>
+                        <span class="product-price">R$200,00</span>
+                        <button class="buy-button js-buy">Comprar</button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer-area footer-logo">
+            <img src="img/logo-n1-footer.png" alt="Logo Agência N1" />
+        </div>
+        <div class="footer-area footer-copyright">
+            <em>Agência N1 - Todos os direitos reservados</em>
+        </div>
+    </footer>
+
 </body>
+
 </html>

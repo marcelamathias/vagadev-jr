@@ -1,3 +1,7 @@
-body{
-background-color: red;
-}
+@import './mixins/media';
+@import './global';
+@import './components/header';
+@import './components/footer';
+@import './components/content';
+@import './components/shelf';
+@import './components/bannertv';

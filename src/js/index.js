@@ -1,4 +1,4 @@
 import '../scss/index.scss'
 
-
-console.log('initial')
+import './components/bannertv'
+import './components/buybutton'
