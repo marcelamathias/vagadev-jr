@@ -1,7 +1,9 @@
 @import './mixins/media';
-@import './global';
+@import './base/global';
+@import './base/normalize';
 @import './components/header';
 @import './components/footer';
 @import './components/content';
 @import './components/shelf';
 @import './components/bannertv';
+@import './components/menu';

@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>N1 Rush</title>
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap"
+        rel="stylesheet" />
 </head>
 
 <body>
@@ -21,7 +22,19 @@
             <div class="header-section">
                 <div class="menu-nav">
                     <button class="menu-button js-menu-open">
-                        <img src="svgs/icon_hamburguer.svg" alt="menu">
+                        <img class="menu-open" src="svgs/icon_hamburguer.svg" alt="menu" />
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25.6062 23.4363L6.51427 4.3444C5.92849 3.75861 4.97874 3.75861 4.39295 4.3444C3.80717 4.93019 3.80717 5.87994 4.39295 6.46572L23.4848 25.5576C24.0706 26.1434 25.0204 26.1434 25.6062 25.5576C26.1919 24.9718 26.1919 24.0221 25.6062 23.4363Z" fill="white"/>
+                            <g clip-path="url(#clip0_0_1)">
+                            <path d="M23.4362 4.3934L4.34435 23.4853C3.75857 24.0711 3.75857 25.0208 4.34435 25.6066C4.93014 26.1924 5.87989 26.1924 6.46567 25.6066L25.5576 6.51472C26.1433 5.92893 26.1433 4.97919 25.5576 4.3934C24.9718 3.80761 24.022 3.80761 23.4362 4.3934Z" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_0_1">
+                            <rect width="30" height="24" fill="white" transform="translate(3 30) rotate(-90)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                                                    
                     </button>
                     <nav class="menu-categories">
                         <ul>
@@ -75,7 +88,7 @@
                     </nav>
                 </div>
 
-                <a href="/" title="N1-Rush">
+                <a href="/" title="N1-Rush" class="header-logo">
                     <img src="img/logo-n1-rush.png" alt="n1-rush">
 
                 </a>
@@ -113,26 +126,40 @@
         </div>
 
     </header>
+
     <main>
         <section class="banner-tv">
             <ul class="js-bannertv">
                 <li>
-                    <img src="img/principal_banner_desktop.jpg" alt="Mortal Kombat">
+                    <picture>
+                        <source media="(min-width: 1024px)" srcset="img/principal_banner_desktop.jpg">
+                        <source media="(max-width: 1023px)" srcset="img/principal_banner_mobile.jpg">
+                        <img class="banner-img" src="img/principal_banner_desktop.jpg" alt="Mortal Kombat">
+                    </picture>
                     <div class="banner-text">
                         <h2 class="banner-title">Mortal Kombat</h2>
                         <span class="banner-price">R$ 299<em>,99</em></span>
                         <p class="banner-subtitle">
-                            Mortal Kombat X combina uma apresentação cinemática única com uma jogabilidade totalmente nova. Os jogadores podem escolher pela primeira vez diversas variantes de cada personagem, afetando tanto a estratégia como o estilo de luta.
+                            Mortal Kombat X combina uma apresentação cinemática única com uma jogabilidade totalmente
+                            nova. Os jogadores podem escolher pela primeira vez diversas variantes de cada personagem,
+                            afetando tanto a estratégia como o estilo de luta.
                         </p>
                     </div>
                 </li>
                 <li>
-                    <img src="img/principal_banner_desktop_02.jpg" alt="Red Dead Redemption">
+                    <picture>
+                        <source media="(min-width: 1024px)" srcset="img/principal_banner_desktop_02.jpg">
+                        <source media="(max-width: 1023px)" srcset="img/principal_banner_mobile_02.jpg">
+                        <img class="banner-img" src="img/principal_banner_desktop_02.jpg" alt="Red Dead Redemption" />
+                    </picture>
+
                     <div class="banner-text hide--lg">
                         <h2 class="banner-title">Red dead Redemption II</h2>
                         <span class="banner-price">R$ 299<em>,99</em></span>
                         <p class="banner-subtitle">
-                            Mortal Kombat X combina uma apresentação cinemática única com uma jogabilidade totalmente nova. Os jogadores podem escolher pela primeira vez diversas variantes de cada personagem, afetando tanto a estratégia como o estilo de luta.
+                            Mortal Kombat X combina uma apresentação cinemática única com uma jogabilidade totalmente
+                            nova. Os jogadores podem escolher pela primeira vez diversas variantes de cada personagem,
+                            afetando tanto a estratégia como o estilo de luta.
                         </p>
                     </div>
                 </li>
@@ -143,71 +170,83 @@
                     <ul class="slick-buttons">
                         <li>
                             <button type="button" class="slick-prev">
-                                <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8.905 0L0.524 8.381L0 8.929L0.524 9.477L8.905 17.858L10.005 16.758L2.166 8.929L9.999 1.096L8.905 0Z" fill="white"/>
+                                <svg width="10" height="18" viewBox="0 0 10 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.905 0L0.524 8.381L0 8.929L0.524 9.477L8.905 17.858L10.005 16.758L2.166 8.929L9.999 1.096L8.905 0Z"
+                                        fill="white" />
                                 </svg>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="slick-next">
-                                <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1.09609 0L-0.00390625 1.1L7.82909 8.933L-0.00390625 16.766L1.09609 17.866L9.47709 9.485L10.0011 8.937L9.47709 8.389L1.09609 0Z" fill="white"/>
-                                </svg>        
+                                <svg width="10" height="18" viewBox="0 0 10 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M1.09609 0L-0.00390625 1.1L7.82909 8.933L-0.00390625 16.766L1.09609 17.866L9.47709 9.485L10.0011 8.937L9.47709 8.389L1.09609 0Z"
+                                        fill="white" />
+                                </svg>
                             </button>
                         </li>
                     </ul>
 
                 </div>
-                <div class="custom-paging">
+            </div>
+        </section>
+        <section class="content">
+            <div class="container">
 
+
+                <div class="box-content">
+
+                    <a href="#">
+                        <img src="img/zelda_banner.jpg" alt="">
+                        <span class="content-subtitle">
+                            <h2>The Legend of Zelda - Breath of the wild </h2>
+                        </span>
+                    </a>
+                    <a href="#">
+                        <img src="img/sekiro_banner.jpg" alt="">
+                        <span class="content-subtitle">
+                            <h2>SEKIRO - Shadows die twice</h2>
+                        </span>
+                    </a>
                 </div>
             </div>
         </section>
-        <section class="content container">
-            <div class="box-content">
 
-                <a href="#">
-                    <img src="img/zelda_banner.jpg" alt="">
-                    <span class="content-subtitle">
-                        <h2>The Legend of Zelda - Breath of the wild </h2>
-                    </span>
-                </a>
-                <a href="#">
-                    <img src="img/sekiro_banner.jpg" alt="">
-                    <span class="content-subtitle">
-                        <h2>SEKIRO - Shadows die twice</h2>
-                    </span>
-                </a>
+        <section class="shelf">
+            <div class="container">
+
+
+                <h2 class="shelf-title">Produtos em destaque</h2>
+                <ul class="product-list">
+                    <li class="product-item">
+                        <img src="img/product-outriders.png" alt="">
+                        <div class="product-info">
+                            <h2 class="product-title">Outriders</h2>
+                            <span class="product-price">R$200,00</span>
+                            <button class="buy-button js-buy">Comprar</button>
+                        </div>
+                    </li>
+                    <li class="product-item">
+                        <img src="img/product-cyberpunk2077.png" alt="">
+                        <div class="product-info">
+                            <h2 class="product-title">CyberPunk 2077</h2>
+                            <span class="product-price">R$200,00</span>
+                            <button class="buy-button js-buy">Comprar</button>
+                        </div>
+                    </li>
+                    <li class="product-item">
+                        <img src="img/product-donkey-kong-country-tropical-freeze.png" alt="">
+                        <div class="product-info">
+                            <h2 class="product-title">Donkey Kong Country Tropical Freeze</h2>
+                            <span class="product-price">R$200,00</span>
+                            <button class="buy-button js-buy">Comprar</button>
+                        </div>
+                    </li>
+                </ul>
             </div>
-        </section>
-        <section class="shelf container">
-            <h2 class="shelf-title">Produtos em destaque</h2>
-            <ul class="product-list">
-                <li class="product-item">
-                    <img src="img/product-outriders.png" alt="">
-                    <div class="product-info">
-                        <h2 class="product-title">Outriders</h2>
-                        <span class="product-price">R$200,00</span>
-                        <button class="buy-button js-buy">Comprar</button>
-                    </div>
-                </li>
-                <li class="product-item">
-                    <img src="img/product-cyberpunk2077.png" alt="">
-                    <div class="product-info">
-                        <h2 class="product-title">CyberPunk 2077</h2>
-                        <span class="product-price">R$200,00</span>
-                        <button class="buy-button js-buy">Comprar</button>
-                    </div>
-                </li>
-                <li class="product-item">
-                    <img src="img/product-donkey-kong-country-tropical-freeze.png" alt="">
-                    <div class="product-info">
-                        <h2 class="product-title">Donkey Kong Country Tropical Freeze</h2>
-                        <span class="product-price">R$200,00</span>
-                        <button class="buy-button js-buy">Comprar</button>
-                    </div>
-                </li>
-            </ul>
         </section>
 
     </main>

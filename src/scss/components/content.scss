@@ -1,19 +1,34 @@
 .content {
-    position: relative;
-    top: -100px;
+    @include desktop() {
+        position: relative;
+        top: -100px;
+    }
     .box-content {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include mobile() {
+        flex-direction: column;
+        padding: 20px 0;
+        }
         a {
-            width: calc(50% - 20px);
             position: relative;
             background-color: white;
+            width: 100%;
+            @include desktop() {
+                width: calc(50% - 20px);
+            }
+            @include mobile(){
+                margin: 10px 0;
+            }
             img {
                 display: block;
-                object-fit: cover;
-                height: 100%;
-                transition: 0.3s;
+                width: 100%;
+                @include desktop() {
+                    object-fit: cover;
+                    height: 100%;
+                    transition: 0.3s;
+                }
             }
             &:hover {
                 img {
@@ -22,7 +37,6 @@
                 .content-subtitle::before {
                     width: 0;
                 }
-                
             }
         }
         .content-subtitle {
@@ -31,16 +45,21 @@
             padding: 10px 20px;
             border-left: 11px solid #084154;
             position: relative;
-            &::before {
-                content: "";
-                width: 300px;
-                height: 1px;
-                background-color: #084154;
-                position: absolute;
-                right: 20px;
-                top: 50%;
-                transform: translateY(-50%);
-                transition: 0.5s;
+            @include mobile() {
+                border-left-width: 5px;
+            }
+            @include desktop() {
+                &::before {
+                    content: "";
+                    width: 300px;
+                    height: 1px;
+                    background-color: #084154;
+                    position: absolute;
+                    right: 20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transition: 0.5s;
+                }
             }
             h2 {
                 background-color: #3ec6e0;

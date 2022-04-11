@@ -8,12 +8,28 @@
         max-width: 420px;
         color: white;
         text-align: right;
+        @include mobile() {
+            top: initial;
+            right: 0;
+            bottom: 0;
+            transform: initial;
+            background: rgba(0, 0, 0, 0.65);
+            padding: 15px 30px;
+        }
+    }
+    .banner-img{
+        width: 100%;
     }
     .banner-title {
         font-weight: 900;
         font-size: 46px;
         line-height: 54px;
         text-transform: uppercase;
+        @include mobile() {
+            font-weight: 900;
+            font-size: 26px;
+            line-height: 30px;
+        }
     }
     .banner-price {
         color: #3ec6e0;
@@ -25,70 +41,105 @@
             font-style: normal;
             font-size: 28px;
             line-height: 33px;
+            @include mobile() {
+                font-size: 28px;
+                line-height: 33px;
+            }
+        }
+        @include mobile() {
+            font-size: 48px;
+            line-height: 56px;
         }
     }
     .banner-subtitle {
         font-weight: 400;
         font-size: 16px;
         line-height: 155%;
+        @include mobile() {
+            font-size: 12px;
+        }
     }
     .banner-navigation {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 0;
-        width: 63px;
-        min-height: 384px;
         background-color: #3ec6e0;
-        z-index: 3;
-        padding-top: 40px;
-        border-bottom-left-radius: 10px;
+        @include desktop() {
+            z-index: 3;
+            padding-top: 40px;
+            border-bottom-left-radius: 10px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            width: 63px;
+            min-height: 384px;
+        }
+        @include mobile() {
+            display: flex;
+            align-items: center;
+        }
         h2 {
-            white-space: nowrap;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
             font-weight: 400;
             font-size: 14px;
             line-height: 16px;
             color: #ffffff;
             margin: 0 auto;
             text-transform: uppercase;
-            &::before{
-                content: '';
-                width: 1px;
-                height: 80px;
-                background-color: white;
-                position: absolute;
-                bottom: 80px;
-                left: 50%;
+            @include desktop() {
+                white-space: nowrap;
+                writing-mode: vertical-rl;
+                text-orientation: mixed;
+
+                &::before {
+                    content: "";
+                    width: 1px;
+                    height: 80px;
+                    background-color: white;
+                    position: absolute;
+                    bottom: 80px;
+                    left: 50%;
+                }
             }
+            @include mobile(){
+                width: 80%;
+                padding: 20px;
+            }
+            
         }
         .slick-navigation {
             background: #084154;
-            border-bottom-left-radius: 10px;
             display: flex;
-            flex-direction: column-reverse;
-            padding: 10px 0;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-
+            @include desktop() {
+                border-bottom-left-radius: 10px;
+                flex-direction: column-reverse;
+                padding: 10px 0;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+            @include mobile(){
+                flex-direction: row-reverse;
+                justify-content: center;
+                width: 30%;
+                padding: 20px;
+            }
         }
-        .slick-buttons{
+        .slick-buttons {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 10px;
+            @include desktop(){
+                margin-top: 10px;
+            }
+
         }
-        .custom-paging{
+        .custom-paging {
             text-align: center;
-            li{
-                color: #FFFFFF;
+            li {
+                color: #ffffff;
                 display: none;
                 font-weight: 400;
                 font-size: 14px;
                 line-height: 16px;
-                &.slick-active{
+                &.slick-active {
                     display: block;
                 }
             }
